@@ -9,7 +9,7 @@
 #import "AppController.h"
 #import "RCRootViewController.h"
 
-@interface AppDelegate : AppController
+@interface AppDelegate : AppController<RCRootViewControllerDelegate>
 {
     RCRootViewController *rootViewController;
 }

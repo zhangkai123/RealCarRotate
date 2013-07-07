@@ -17,9 +17,14 @@
     
     [[super getViewController] view].hidden = YES;
     rootViewController = [[RCRootViewController alloc]init];
+    rootViewController.delegate = self;
     [[super getWindow] addSubview:rootViewController.view];
     
     return rValue;
 }
-
+-(void)goToCarModel:(NSString *)carM
+{
+    const char *carModel = [carM UTF8String];
+    UnitySendMessage("scene", "Test", carModel);
+}
 @end

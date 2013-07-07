@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RCRootViewController : UIViewController
+@protocol RCRootViewControllerDelegate <NSObject>
 
+-(void)goToCarModel:(NSString *)carM;
+
+@end
+
+@interface RCRootViewController : UIViewController
+{
+    NSMutableArray *carArray;
+    __unsafe_unretained id<RCRootViewControllerDelegate> delegate;
+}
+@property(nonatomic,retain) NSMutableArray *carArray;
+@property(nonatomic,unsafe_unretained) id<RCRootViewControllerDelegate> delegate;
 @end
