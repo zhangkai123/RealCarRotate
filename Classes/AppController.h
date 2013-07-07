@@ -7,6 +7,9 @@
 - (void) Repaint;
 - (void) RepaintDisplayLink;
 - (void) prepareRunLoop;
+
+-(UIWindow *)getWindow;
+-(UIViewController *)getViewController;
 @end
 
 int		UnityGetAccelerometerFrequency();

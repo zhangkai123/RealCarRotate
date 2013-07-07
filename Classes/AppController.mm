@@ -310,6 +310,14 @@ void UnityInitTrampoline()
 
 
 @implementation AppController
+-(UIWindow *)getWindow
+{
+    return UnityGetMainWindow();
+}
+-(UIViewController *)getViewController
+{
+    return UnityGetGLViewController();
+}
 
 - (void) RepaintDisplayLink
 {

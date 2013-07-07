@@ -7,7 +7,11 @@
 //
 
 #import "AppController.h"
+#import "RCRootViewController.h"
 
 @interface AppDelegate : AppController
-
+{
+    RCRootViewController *rootViewController;
+}
+@property(nonatomic,retain) RCRootViewController *rootViewController;
 @end
