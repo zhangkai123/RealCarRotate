@@ -27,9 +27,12 @@
     const char *carModel = [carM UTF8String];
     UnitySendMessage("scene", "Test", carModel);
 
+    [[super getWindow] bringSubviewToFront:rootViewController.view];
     [[super getViewController] view].hidden = NO;
     [UIView animateWithDuration:0.6 animations:^{
         rootViewController.view.frame = CGRectMake(-320, 0, 320, 480);
+    } completion:^(BOOL finished){
+//        [[super getViewController] view].hidden = NO;
     }];
 }
 @end
