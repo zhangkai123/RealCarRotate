@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 
 	NSAutoreleasePool*		pool = [NSAutoreleasePool new];
 
-	UIApplicationMain(argc, argv, nil, @"AppController");
+	UIApplicationMain(argc, argv, nil, @"AppDelegate");
 
 	[pool release];
 

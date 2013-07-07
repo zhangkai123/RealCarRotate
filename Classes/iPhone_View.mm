@@ -110,7 +110,8 @@ void OnUnityReady()
     HideSplashScreen();
 
     [_mainDisplay->window addSubview: _mainDisplay->view];
-    _mainDisplay->window.rootViewController = _viewController;
+//    _mainDisplay->window.rootViewController = _viewController;
+    [_mainDisplay->window addSubview:_viewController.view];
     [_mainDisplay->window bringSubviewToFront: _mainDisplay->view];
 
     // this is called after level was loaded, so some orientation constraints might have changed
